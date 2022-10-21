@@ -4,7 +4,7 @@ import routes from "./routes/index.js";
 
 const app = express();
 
-db.on("fail", ()=>console.log("Não foi possível conectar ao banco de dados"));
+db.on("error", ()=>console.log("Não foi possível conectar ao banco de dados"));
 db.once("open", ()=>console.log("Conexão com o banco de dados estabelecida"));
 
 routes(app);

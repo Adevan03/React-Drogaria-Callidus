@@ -3,11 +3,11 @@ import usuarioRoute from "./usuarioRoutes.js"
 
 const routes = (app)=>{
     app.route("/").get((req, res)=>{
-        res.status(200).send();
+        res.status(200).send("Bem Vindo");
     })
 
     app.use(
-        express.json,
+        express.json(),
         usuarioRoute
     )
 }

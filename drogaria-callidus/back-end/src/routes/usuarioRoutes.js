@@ -4,6 +4,6 @@ import UsuarioController from "../controller/usuarioController.js";
 const router = express();
 
 
-router.post("/login", UsuarioController.logarUsuario);
+router.get("/login", UsuarioController.logarUsuario);
 
 export default router;
